@@ -15,3 +15,8 @@ jobs:
             ls -al
             zip main.zip main.py
             ls -al
+
+      - run:
+          name: deploy
+          commands:
+            - aws lambda update-function-code --function-name lambda_hello_world --zip-file main.zip
