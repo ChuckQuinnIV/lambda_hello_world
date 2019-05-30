@@ -11,7 +11,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            pip install awscli
+            sudo pip install awscli
 
       - run:
           name: zip artifact
