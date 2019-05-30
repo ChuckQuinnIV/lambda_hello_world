@@ -9,6 +9,11 @@ jobs:
       - checkout
 
       - run:
+          name: install dependencies
+          command: |
+            pip install awscli
+
+      - run:
           name: zip artifact
           command: |
             pwd
