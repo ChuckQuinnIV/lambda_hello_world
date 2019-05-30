@@ -25,4 +25,8 @@ jobs:
           name: deploy
           context: AWS
           command: |
-            aws lambda update-function-code --function-name lambda_hello_world --zip-file fileb://main.zip --region us-east-1
+            aws configure set aws_access_key_id ${AWS_ACCESS_KEY_ID}
+            aws configure set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}
+            aws configure set default.region us-east-1
+
+            aws lambda update-function-code --function-name lambda_hello_world --zip-file fileb://main.zip
