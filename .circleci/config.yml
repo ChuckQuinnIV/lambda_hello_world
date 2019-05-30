@@ -25,5 +25,4 @@ jobs:
           name: deploy
           context: AWS
           command: |
-            aws configure --profile default --region us-east-1 --output text
-            aws lambda update-function-code --function-name lambda_hello_world --zip-file fileb://main.zip
+            aws lambda update-function-code --function-name lambda_hello_world --zip-file fileb://main.zip --region us-east-1
