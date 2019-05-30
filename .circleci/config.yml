@@ -9,11 +9,9 @@ jobs:
       - checkout
 
       - run:
-          name: say hi
+          name: zip artifact
           command: |
-            echo "Well Howdy!"
-
-      - run:
-          name: deployment
-          command: |
+            pwd
+            ls -al
+            zip main.zip main.py
             ls -al
